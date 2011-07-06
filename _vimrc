@@ -39,3 +39,5 @@ let g:CommandTMaxHeight=10
 set scrolloff=10
 
 set t_Co=256
+"colorscheme candycode  "quite like this theme
+colorscheme inkpot "nice theme too
