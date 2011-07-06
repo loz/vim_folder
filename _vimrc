@@ -38,6 +38,13 @@ let g:CommandTMaxHeight=10
 "Scroll follow at least 10 lines
 set scrolloff=10
 
-set t_Co=256
-"colorscheme candycode  "quite like this theme
-colorscheme inkpot "nice theme too
+if has('gui') == 0
+  "avoiding annoying CSApprox warning message
+  let g:CSApprox_verbose_level = 0
+  colorscheme desert
+else
+  set t_Co=256
+  "colorscheme candycode  "quite like this theme
+  colorscheme inkpot "nice theme too
+endif
+
