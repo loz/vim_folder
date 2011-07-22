@@ -4,11 +4,11 @@ SHELL = /bin/sh
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /home/loz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/i686-linux
+topdir = /Users/jlozinski/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/i686-darwin10.6.0
 hdrdir = $(topdir)
 VPATH = $(srcdir):$(topdir):$(hdrdir)
 exec_prefix = $(prefix)
-prefix = $(DESTDIR)/home/loz/.rvm/rubies/ree-1.8.7-2010.02
+prefix = $(DESTDIR)/Users/jlozinski/.rvm/rubies/ruby-1.8.7-p330
 sharedstatedir = $(prefix)/com
 mandir = $(datarootdir)/man
 psdir = $(docdir)
@@ -38,31 +38,31 @@ localstatedir = $(prefix)/var
 sitelibdir = $(sitedir)/$(ruby_version)
 
 CC = gcc
-LIBRUBY = $(LIBRUBY_A)
+LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = -Wl,-R -Wl,$(libdir) -L$(libdir) 
+LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
 LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static
 
 RUBY_EXTCONF_H = 
-CFLAGS   =  -fPIC -g -O2  $(cflags) 
+CFLAGS   =  -fno-common -g -O2  -fno-common -pipe -fno-common $(cflags) 
 INCFLAGS = -I. -I$(topdir) -I$(hdrdir) -I$(srcdir)
-DEFS     = -D_FILE_OFFSET_BITS=64
-CPPFLAGS = -DHAVE_RUBY_H  $(DEFS) $(cppflags)
+DEFS     = 
+CPPFLAGS = -DHAVE_RUBY_H  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE $(DEFS) $(cppflags)
 CXXFLAGS = $(CFLAGS) 
-ldflags  = -L.  -rdynamic -Wl,-export-dynamic
+ldflags  = -L. 
 dldflags = 
 archflag = 
 DLDFLAGS = $(ldflags) $(dldflags) $(archflag)
-LDSHARED = $(CC) -shared
+LDSHARED = cc -dynamic -bundle -undefined suppress -flat_namespace
 AR = ar
 EXEEXT = 
 
 RUBY_INSTALL_NAME = ruby
 RUBY_SO_NAME = ruby
-arch = i686-linux
-sitearch = i686-linux
+arch = i686-darwin10.6.0
+sitearch = i686-darwin10.6.0
 ruby_version = 1.8
-ruby = /home/loz/.rvm/rubies/ree-1.8.7-2010.02/bin/ruby
+ruby = /Users/jlozinski/.rvm/rubies/ruby-1.8.7-p330/bin/ruby
 RUBY = $(ruby)
 RM = rm -f
 MAKEDIRS = mkdir -p
@@ -76,7 +76,7 @@ COPY = cp
 preload = 
 
 libpath = . $(libdir)
-LIBPATH =  -L. -L$(libdir) -Wl,-R$(libdir)
+LIBPATH =  -L. -L$(libdir)
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -86,11 +86,11 @@ extout =
 extout_prefix = 
 target_prefix = 
 LOCAL_LIBS = 
-LIBS =   -lrt -ldl -lcrypt -lm   -lc
-SRCS = matcher.c match.c ext.c
-OBJS = matcher.o match.o ext.o
+LIBS = $(LIBRUBYARG_SHARED)  -ldl -lobjc  
+SRCS = ext.c match.c matcher.c
+OBJS = ext.o match.o matcher.o
 TARGET = ext
-DLLIB = $(TARGET).so
+DLLIB = $(TARGET).bundle
 EXTSTATIC = 
 STATIC_LIB = 
 
@@ -100,7 +100,7 @@ RUBYLIBDIR    = $(sitelibdir)$(target_prefix)
 RUBYARCHDIR   = $(sitearchdir)$(target_prefix)
 
 TARGET_SO     = $(DLLIB)
-CLEANLIBS     = $(TARGET).so $(TARGET).il? $(TARGET).tds $(TARGET).map
+CLEANLIBS     = $(TARGET).bundle $(TARGET).il? $(TARGET).tds $(TARGET).map
 CLEANOBJS     = *.o *.a *.s[ol] *.pdb *.exp *.bak
 
 all:		$(DLLIB)
