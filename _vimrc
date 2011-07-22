@@ -10,6 +10,12 @@ set hlsearch
 set incsearch
 set mouse=a
 
+filetype on "Auto detect filetypes
+set nocompatible "no plain vi compatability
+
+"Add recently accessed projects menu (project plugin)
+set viminfo^=!
+
 "Stuff from Steve's
 set cursorline
 set title
@@ -48,3 +54,25 @@ else
   colorscheme inkpot "nice theme too
 endif
 
+"Stuff from using vim as rails IDE
+"alt+n, alt_p navigate beween entires in QuickFix
+map <slient> <m-p> :cp <cr>
+map <slient> <m-n> :cn <cr>
+
+set autowrite "Writes on make/shell commands
+
+"Look at these and decide if want:
+"set nocp incsearch
+set cinoptions=:0,p0,t0
+set cinwords=if,else,while,do,for,switch,case
+set formatoptions=tcqr
+set cindent
+
+" Visual stuff
+set showmatch "Show matching brackets
+set mat=5 "Bracket blinking
+set list
+"Show $ at end of line and tailing spaces as ~
+"set lcs=tab:\ \,eol:$,trail:~,extends:>,precedes:<
+set lcs=trail:~
+"^^^ seems invalid
