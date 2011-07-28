@@ -77,3 +77,6 @@ set list
 "set lcs=tab:\ \,eol:$,trail:~,extends:>,precedes:<
 set lcs=trail:~
 "^^^ seems invalid
+
+"Launch NERDTree on open
+autocmd VimEnter * NERDTree
