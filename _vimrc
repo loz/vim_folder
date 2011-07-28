@@ -1,3 +1,4 @@
+set nocompatible "no plain vi compatability
 syntax on
 set ts=2
 set ai
@@ -10,8 +11,8 @@ set hlsearch
 set incsearch
 set mouse=a
 
-filetype on "Auto detect filetypes
-set nocompatible "no plain vi compatability
+"filetype on "Auto detect filetypes
+filetype plugin indent on
 
 "Add recently accessed projects menu (project plugin)
 set viminfo^=!
@@ -63,10 +64,10 @@ set autowrite "Writes on make/shell commands
 
 "Look at these and decide if want:
 "set nocp incsearch
-set cinoptions=:0,p0,t0
-set cinwords=if,else,while,do,for,switch,case
-set formatoptions=tcqr
-set cindent
+"set cinoptions=:0,p0,t0
+"set cinwords=if,else,while,do,for,switch,case
+"set formatoptions=tcqr
+"set cindent
 
 " Visual stuff
 set showmatch "Show matching brackets
@@ -76,3 +77,6 @@ set list
 "set lcs=tab:\ \,eol:$,trail:~,extends:>,precedes:<
 set lcs=trail:~
 "^^^ seems invalid
+
+"Launch NERDTree on open
+autocmd VimEnter * NERDTree
