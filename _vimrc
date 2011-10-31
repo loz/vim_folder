@@ -80,3 +80,6 @@ set lcs=trail:~
 
 "Launch NERDTree on open
 autocmd VimEnter * NERDTree
+
+"Map Ctrl-`to Toggle Nerdtree
+map <C-T> :NERDTreeToggle<CR>
