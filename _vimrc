@@ -39,7 +39,6 @@ nmap <C-Tab> :tabn<CR>
 vmap # c#{}<Esc>hpl
 
 "Map Ctrl-t to launch commant-t
-map <C-T> :CommandT<CR>
 let g:CommandTMaxHeight=10
 
 "Scroll follow at least 10 lines
@@ -80,3 +79,4 @@ set lcs=trail:~
 
 "Launch NERDTree on open
 autocmd VimEnter * NERDTree
+map <C-T> :NERDTreeToggle<CR>
