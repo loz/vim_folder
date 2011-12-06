@@ -30,6 +30,7 @@ set wildmode=longest,list "bash style autocomplete options
 set wildmenu "help autocomplete vim commands
 
 
+
 "Open all buffers in new tabs
 "au BufAdd,BufNewFile * nested tab sball
 "Ctrl-Tab switch tabs
@@ -53,6 +54,10 @@ else
   "colorscheme candycode  "quite like this theme
   colorscheme inkpot "nice theme too
 endif
+
+"Nice Cursor Line
+highlight clear CursorLine
+highlight CursorLine ctermbg=black
 
 "Stuff from using vim as rails IDE
 "alt+n, alt_p navigate beween entires in QuickFix
@@ -80,3 +85,5 @@ set lcs=trail:~
 "Launch NERDTree on open
 autocmd VimEnter * NERDTree
 map <C-T> :NERDTreeToggle<CR>
+
+map <TAB> ==
