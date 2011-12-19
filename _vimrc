@@ -78,8 +78,5 @@ set list
 set lcs=trail:~
 "^^^ seems invalid
 
-"Launch NERDTree on open
-autocmd VimEnter * NERDTree
-
 "Map Ctrl-`to Toggle Nerdtree
 map <C-T> :NERDTreeToggle<CR>
