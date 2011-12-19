@@ -1,1 +1,0 @@
-../tcomment_vim/doc/tcomment.txt

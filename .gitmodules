@@ -8,5 +8,8 @@
   path = tcomment_vim
   url = https://github.com/tomtom/tcomment_vim.git
 [submodule "ctrlp.vim"]
-	path = ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
+  path = ctrlp.vim
+  url = https://github.com/kien/ctrlp.vim.git
+[submodule "ack.vim"]
+  path = ack.vim
+  url = git://github.com/mileszs/ack.vim.git

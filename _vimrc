@@ -30,6 +30,7 @@ set wildmode=longest,list "bash style autocomplete options
 set wildmenu "help autocomplete vim commands
 
 
+
 "Open all buffers in new tabs
 "au BufAdd,BufNewFile * nested tab sball
 "Ctrl-Tab switch tabs
@@ -39,7 +40,6 @@ nmap <C-Tab> :tabn<CR>
 vmap # c#{}<Esc>hpl
 
 "Map Ctrl-t to launch commant-t
-map <C-T> :CommandT<CR>
 let g:CommandTMaxHeight=10
 
 "Scroll follow at least 10 lines
@@ -54,6 +54,10 @@ else
   "colorscheme candycode  "quite like this theme
   colorscheme inkpot "nice theme too
 endif
+
+"Nice Cursor Line
+highlight clear CursorLine
+highlight CursorLine ctermbg=black
 
 "Stuff from using vim as rails IDE
 "alt+n, alt_p navigate beween entires in QuickFix
@@ -80,3 +84,5 @@ set lcs=trail:~
 
 "Map Ctrl-`to Toggle Nerdtree
 map <C-T> :NERDTreeToggle<CR>
+
+map <TAB> ==
