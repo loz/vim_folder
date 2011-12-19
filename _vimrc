@@ -86,3 +86,5 @@ set lcs=trail:~
 map <C-T> :NERDTreeToggle<CR>
 
 map <TAB> ==
+
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
