@@ -88,3 +88,6 @@ map <C-T> :NERDTreeToggle<CR>
 map <TAB> ==
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
+
+"Platform .ui files
+au BufRead,BufNewFile *.ui set filetype=ruby
