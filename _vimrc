@@ -83,7 +83,7 @@ set lcs=trail:~
 "^^^ seems invalid
 
 "Map Ctrl-`to Toggle Nerdtree
-map <C-T> :NERDTreeToggle<CR>
+"map <C-T> :NERDTreeToggle<CR>
 
 map <TAB> ==
 
@@ -91,3 +91,6 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
 
 "Platform .ui files
 au BufRead,BufNewFile *.ui set filetype=ruby
+
+"ctags for gems.tags
+set tags+=gems.tags
