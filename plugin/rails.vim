@@ -84,7 +84,8 @@ function! s:Detect(filename)
   if sep != ""
     let fn = getcwd().sep.fn
   endif
-  if fn =~ '[\/]config[\/]environment\.rb$'
+  "if fn =~ '[\/]config[\/]environment\.rb$'
+  if fn =~ '[\/]script[\/]rails$'
     return s:BufInit(strpart(fn,0,strlen(fn)-22))
   endif
   if isdirectory(fn)
@@ -103,7 +104,8 @@ function! s:Detect(filename)
   endwhile
   let ofn = ""
   while fn != ofn
-    if filereadable(fn . "/config/environment.rb")
+    "if filereadable(fn . "/config/environment.rb")
+    if filereadable(fn . "/script/rails")
       return s:BufInit(fn)
     endif
     let ofn = fn
