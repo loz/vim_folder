@@ -83,7 +83,7 @@ set lcs=trail:~
 "^^^ seems invalid
 
 "Map Ctrl-`to Toggle Nerdtree
-"map <C-T> :NERDTreeToggle<CR>
+map <C-L> :NERDTreeToggle<CR>
 
 map <TAB> ==
 
