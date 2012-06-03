@@ -95,3 +95,5 @@ au BufRead,BufNewFile *.ui set filetype=ruby
 
 "ctags for gems.tags
 set tags+=gems.tags
+
+nnoremap <f5> :!ctags -R<CR>
