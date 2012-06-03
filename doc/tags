@@ -146,6 +146,7 @@ ack-author	ack.txt	/*ack-author*
 ack-mappings	ack.txt	/*ack-mappings*
 ack.txt	ack.txt	/*ack.txt*
 config/rails.vim	rails.txt	/*config\/rails.vim*
+cs	surround.txt	/*cs*
 ctrlp-changelog	ctrlp.txt	/*ctrlp-changelog*
 ctrlp-commands	ctrlp.txt	/*ctrlp-commands*
 ctrlp-contents	ctrlp.txt	/*ctrlp-contents*
@@ -157,6 +158,7 @@ ctrlp-mappings	ctrlp.txt	/*ctrlp-mappings*
 ctrlp-options	ctrlp.txt	/*ctrlp-options*
 ctrlp-thanks	ctrlp.txt	/*ctrlp-thanks*
 ctrlp.txt	ctrlp.txt	/*ctrlp.txt*
+ds	surround.txt	/*ds*
 fugitive	fugitive.txt	/*fugitive*
 fugitive#statusline()	fugitive.txt	/*fugitive#statusline()*
 fugitive-:Gblame	fugitive.txt	/*fugitive-:Gblame*
@@ -214,6 +216,8 @@ g:rails_modelines	rails.txt	/*g:rails_modelines*
 g:rails_syntax	rails.txt	/*g:rails_syntax*
 g:rails_tabstop	rails.txt	/*g:rails_tabstop*
 g:rails_url	rails.txt	/*g:rails_url*
+i_CTRL-G_S	surround.txt	/*i_CTRL-G_S*
+i_CTRL-G_s	surround.txt	/*i_CTRL-G_s*
 macros/rails.vim	rails.txt	/*macros\/rails.vim*
 rails	rails.txt	/*rails*
 rails-'cfu'	rails.txt	/*rails-'cfu'*
@@ -346,8 +350,21 @@ rails-template-types	rails.txt	/*rails-template-types*
 rails-type-navigation	rails.txt	/*rails-type-navigation*
 rails-vim-integration	rails.txt	/*rails-vim-integration*
 rails.txt	rails.txt	/*rails.txt*
+surround	surround.txt	/*surround*
+surround-customizing	surround.txt	/*surround-customizing*
+surround-issues	surround.txt	/*surround-issues*
+surround-mappings	surround.txt	/*surround-mappings*
+surround-replacements	surround.txt	/*surround-replacements*
+surround-targets	surround.txt	/*surround-targets*
+surround.txt	surround.txt	/*surround.txt*
 textile-changelog	textile.txt	/*textile-changelog*
 textile-commands	textile.txt	/*textile-commands*
 textile-credits	textile.txt	/*textile-credits*
 textile-requirements	textile.txt	/*textile-requirements*
 textile.txt	textile.txt	/*textile.txt*
+vS	surround.txt	/*vS*
+vgS	surround.txt	/*vgS*
+yS	surround.txt	/*yS*
+ySS	surround.txt	/*ySS*
+ys	surround.txt	/*ys*
+yss	surround.txt	/*yss*
