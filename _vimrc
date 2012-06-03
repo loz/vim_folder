@@ -13,6 +13,7 @@ set mouse=a
 
 "filetype on "Auto detect filetypes
 filetype plugin indent on
+runtime macros/matchit.vim
 
 "Add recently accessed projects menu (project plugin)
 set viminfo^=!
