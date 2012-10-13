@@ -92,8 +92,12 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
 
 "Platform .ui files
 au BufRead,BufNewFile *.ui set filetype=ruby
+"Go
+au BufRead,BufNewFile *.go set filetype=go
 
 "ctags for gems.tags
 set tags+=gems.tags
 
 nnoremap <f5> :!ctags -R<CR>
+
+call pathogen#infect()
