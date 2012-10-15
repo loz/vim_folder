@@ -56,6 +56,9 @@ else
   colorscheme inkpot "nice theme too
 endif
 
+"For Projectors
+"colorscheme morning
+
 "Nice Cursor Line
 highlight clear CursorLine
 highlight CursorLine ctermbg=black
@@ -92,6 +95,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
 
 "Platform .ui files
 au BufRead,BufNewFile *.ui set filetype=ruby
+au BufRead,BufNewFile *.mustache set filetype=html
 
 "ctags for gems.tags
 set tags+=gems.tags
