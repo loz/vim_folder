@@ -30,7 +30,7 @@ set hidden "stop annoying multi buffer loaded thing
 set wildmode=longest,list "bash style autocomplete options
 set wildmenu "help autocomplete vim commands
 
-
+set colorcolumn=80
 
 "Open all buffers in new tabs
 "au BufAdd,BufNewFile * nested tab sball
