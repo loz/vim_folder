@@ -88,7 +88,10 @@ map <C-L> :NERDTreeToggle<CR>
 
 map <TAB> ==
 
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
+" This breaks fugitive :(
+"set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
+" This stops in ctrl-p which is ace tho
+let g:ctrlp_custom_ignore = {'dir':  '\.git$\|\.hg$\|\.svn$', 'file': '\.exe$\|\.so$\|\.dll$', 'link': 'bad_symbolic_link'}
 
 "Platform .ui files
 au BufRead,BufNewFile *.ui set filetype=ruby
