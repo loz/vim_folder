@@ -13,3 +13,9 @@
 [submodule "snipmate.vim"]
 	path = snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
+[submodule "syntastic"]
+	path = syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim-ruby-refactoring"]
+	path = vim-ruby-refactoring
+	url = https://github.com/ecomba/vim-ruby-refactoring.git

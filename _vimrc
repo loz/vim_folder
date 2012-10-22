@@ -30,7 +30,7 @@ set hidden "stop annoying multi buffer loaded thing
 set wildmode=longest,list "bash style autocomplete options
 set wildmenu "help autocomplete vim commands
 
-
+set colorcolumn=80
 
 "Open all buffers in new tabs
 "au BufAdd,BufNewFile * nested tab sball
@@ -91,13 +91,20 @@ map <C-L> :NERDTreeToggle<CR>
 
 map <TAB> ==
 
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
+" This breaks fugitive :(
+"set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
+" This stops in ctrl-p which is ace tho
+let g:ctrlp_custom_ignore = {'dir':  '\.git$\|\.hg$\|\.svn$', 'file': '\.exe$\|\.so$\|\.dll$', 'link': 'bad_symbolic_link'}
 
 "Platform .ui files
 au BufRead,BufNewFile *.ui set filetype=ruby
 au BufRead,BufNewFile *.mustache set filetype=html
+"Go
+au BufRead,BufNewFile *.go set filetype=go
 
 "ctags for gems.tags
 set tags+=gems.tags
 
 nnoremap <f5> :!ctags -R<CR>
+
+call pathogen#infect()
