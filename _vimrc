@@ -61,7 +61,7 @@ endif
 
 "Nice Cursor Line
 highlight clear CursorLine
-highlight CursorLine ctermbg=black
+highlight CursorLine ctermbg=darkgrey
 
 "Stuff from using vim as rails IDE
 "alt+n, alt_p navigate beween entires in QuickFix
@@ -105,6 +105,6 @@ au BufRead,BufNewFile *.go set filetype=go
 "ctags for gems.tags
 set tags+=gems.tags
 
-nnoremap <f5> :!ctags -R<CR>
+nnoremap <f2> :!ctags -R<CR>
 
 call pathogen#infect()
